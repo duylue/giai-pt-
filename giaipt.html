@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr><td>a</td>
+        <td>b</td>
+        <td>c</td>
+    </tr>
+    <tr>
+       <td><input type="text" id="a">x^2+</td>
+        <td><input type="text" id="b">x+</td>
+        <td><input type="text" id="c">c</td>
+        <td> = 0</td>
+    </tr>
+
+    <tr>
+      <td><button type="button" onclick="denta()">ket qua</button> </td>
+    </tr>
+    <tr>
+        <p id="qwe"></p>
+    </tr>
+</table>
+<script>
+    function denta() {
+        let a = +(document.getElementById('a').value)
+        let b = +(document.getElementById('b').value)
+        let c = +(document.getElementById('c').value)
+        if (a === 0) {
+            document.getElementById("qwe").innerHTML= "phuong trinh vo nghiem";
+        } else {
+            let d = b * b - 4 * a * c
+            if (d < 0) {
+                alert('phuong trinh vo nghiem')
+            } else {
+                if (d === 0) {
+                    alert('pt co nghiem kep' + (-b) / (2 * a))
+                } else {
+                    let x1 = (-b - Math.sqrt(d)) / (2 * a)
+                    let x2 = (-b + Math.sqrt(d)) / (2 * a)
+                    alert('ngiem la :x1,X2=' + x1 + "   " + x2)
+
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+</script>
