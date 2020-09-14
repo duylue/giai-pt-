@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel = stylesheet href="css%202.css">
+</head>
+<body>
+<div class="content">
+    <h1>Tính tổng thực thu trong một năm</h1>
+<table>
+    <tr>
+        <td><input type="text" id="x3"></td>
+        <td><select id="se">
+            <option value="se1">bac 1</option>
+            <option value="se2"> bac 2</option>
+        </select></td>
+     <td><button type="button" onclick="met()" >enter</button></td>
+    </tr><br>
+    <tr>
+        <td><p id="out"></p></td>
+    </tr>
+</table>
+</div>
+<script>
+    function met() {
+        let x3 = +(document.getElementById('x3').value)
+        se = document.getElementById('se')
+        if (se.value == 'se1') {
+            if (x3 < 10000000) {
+                let y = x3 * 12
+                document.getElementById('out').innerHTML =' tổng thực thu trong một năm của bạn là'+ ' ' +y
+            } else if (x3 > 50000000) {
+                let y = x3 * 7
+                document.getElementById('out').innerHTML =' tổng thực thu trong một năm của bạn là'+ ' ' +y
+            } else {
+                let y = x3 * 9.7
+                document.getElementById('out').innerHTML =' tổng thực thu trong một năm của bạn là'+ ' ' +y
+            }
+        }
+        if (se.value == 'se2') {
+            if (x3 < 10000000) {
+                let y = x3 * 12
+                document.getElementById('out').innerHTML =' tổng thực thu trong một năm của bạn là'+ ' ' +y
+            } else if (x3 > 50000000) {
+                let y = x3 * 6.5
+                document.getElementById('out').innerHTML =' tổng thực thu trong một năm của bạn là'+ ' ' +y
+            } else {
+                let y = x3 * 9
+                document.getElementById('out').innerHTML =' tổng thực thu trong một năm của bạn là'+ ' ' +y
+            }
+
+
+        }
+    }
+</script>
+</body>
+</html>
